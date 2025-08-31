@@ -1,0 +1,11 @@
+:root {
+    --uid-sso-color-primary: #008BD0;
+}
+
+.uid-sso-clientname:before {
+    content: "Merkur.de nutzt"
+}
+
+.uid-sso-client-logo.client-268 {
+    height: 35px;
+}

@@ -1,0 +1,468 @@
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+:root {
+    --uid-sso-color-white: #ffffff;
+    --uid-sso-color-blue-500: #007aff;
+    --uid-sso-color-gray-600: #4d4d4d;
+    --uid-sso-color-gray-800: #212121;
+
+    /* basic units for space and sizes for e.g. icons */
+    --uid-sso-unit-2px: 2px;
+    --uid-sso-unit-4px: 4px;
+    --uid-sso-unit-8px: 8px;
+    --uid-sso-unit-10px: 10px;
+    --uid-sso-unit-12px: 12px;
+    --uid-sso-unit-14px: 14px;
+    --uid-sso-unit-16px: 16px;
+    --uid-sso-unit-18px: 18px;
+    --uid-sso-unit-20px: 20px;
+    --uid-sso-unit-22px: 22px;
+    --uid-sso-unit-24px: 24px;
+
+    --uid-sso-color-primary: var(--uid-sso-color-blue-500);
+
+    --uid-sso-color-surface: var(--uid-sso-color-white);
+    --uid-sso-color-on-surface: var(--uid-sso-color-gray-800);
+
+    --uid-sso-color-tooltip-container: var(--uid-sso-color-gray-600);
+    --uid-sso-color-on-tooltip-container: var(--uid-sso-color-white);
+
+    /* font */
+    --uid-sso-font-family-brand: "Poppins", helvetica, arial, sans-serif;
+    --uid-sso-font-family-plain: "Poppins", helvetica, arial, sans-serif;
+
+    /* font-weight */
+    --uid-sso-font-weight-semi-bold: 600; /* SemiBold; */
+    --uid-sso-font-weight-regular: 400; /* Regular; */
+
+    /* font-size */
+    --uid-sso-font-size-md: var(--uid-sso-unit-16px);
+    --uid-sso-font-size-sm: var(--uid-sso-unit-14px);
+    --uid-sso-font-size-xs: var(--uid-sso-unit-12px);
+    --uid-sso-font-size-2xs: var(--uid-sso-unit-10px);
+
+    /* line-height */
+    --uid-sso-line-height-md: var(--uid-sso-unit-24px);
+    --uid-sso-line-height-sm: var(--uid-sso-unit-22px);
+    --uid-sso-line-height-xs: var(--uid-sso-unit-20px);
+    --uid-sso-line-height-2xs: var(--uid-sso-unit-18px);
+
+    /* sizes for icons, corner radius, etc. */
+    --uid-sso-size-2xs: var(--uid-sso-unit-4px);
+
+    /* spaces for layout */
+    --uid-sso-space-3xs: var(--uid-sso-unit-2px);
+    --uid-sso-space-2xs: var(--uid-sso-unit-4px);
+    --uid-sso-space-xs: var(--uid-sso-unit-8px);
+    --uid-sso-space-sm: var(--uid-sso-unit-12px);
+    --uid-sso-space-md: var(--uid-sso-unit-16px);
+    --uid-sso-space-xl: var(--uid-sso-unit-24px);
+
+    /* title */
+    /* medium */
+    --uid-sso-title-medium-font: var(--uid-sso-font-family-plain);
+    --uid-sso-title-medium-weight-prominent: var(--uid-sso-font-weight-semi-bold);
+    --uid-sso-title-medium-size: var(--uid-sso-font-size-md);
+    --uid-sso-title-medium-line-height: var(--uid-sso-line-height-md);
+    --uid-sso-title-medium-letter-spacing: 0;
+
+    /* lable */
+    /* large */
+    --uid-sso-lable-large-font: var(--uid-sso-font-family-plain);
+    --uid-sso-lable-large-weight-prominent: var(--uid-sso-font-weight-semi-bold);
+    --uid-sso-lable-large-letter-spacing: 0;
+    --uid-sso-lable-large-size: var(--uid-sso-font-size-md);
+    --uid-sso-lable-large-line-height: var(--uid-sso-line-height-md);
+
+    /* body */
+    /* large */
+    --uid-sso-body-large-font: var(--uid-sso-font-family-plain);
+    --uid-sso-body-large-weight: var(--uid-sso-font-weight-regular);
+    --uid-sso-body-large-weight-prominent: var(--uid-sso-font-weight-semi-bold);
+    --uid-sso-body-large-letter-spacing: 0;
+    --uid-sso-body-large-size: var(--uid-sso-font-size-sm);
+    --uid-sso-body-large-line-height: var(--uid-sso-line-height-sm);
+
+    /* medium */
+    --uid-sso-body-medium-font: var(--uid-sso-font-family-plain);
+    --uid-sso-body-medium-weight: var(--uid-sso-font-weight-regular);
+    --uid-sso-body-medium-letter-spacing: 0;
+    --uid-sso-body-medium-size: var(--uid-sso-font-size-xs);
+    --uid-sso-body-medium-line-height: var(--uid-sso-line-height-xs);
+
+    /* small */
+    --uid-sso-body-small-font: var(--uid-sso-font-family-plain);
+    --uid-sso-body-small-weight: var(--uid-sso-font-weight-regular);
+    --uid-sso-body-small-letter-spacing: 0;
+    --uid-sso-body-small-size: var(--uid-sso-font-size-2xs);
+    --uid-sso-body-small-line-height: var(--uid-sso-line-height-2xs);
+
+    --uid-sso-text-decoration-underline: underline;
+    --uid-sso-text-decoration-none: none;
+}
+
+/* ==========================================================================
+   FONTS
+   ========================================================================== */
+/* poppins-regular */
+@font-face {
+    font-display: fallback;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://idcdn.de/static-files/common/fonts/Poppins/Poppins400normal.woff2?20231205") format("woff2"), /* Super Modern Browsers */
+    url("https://idcdn.de/static-files/common/fonts/Poppins/Poppins400normal.woff?20231205") format("woff"); /* Modern Browsers */
+}
+
+/* poppins-semi-bold */
+@font-face {
+    font-display: fallback; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    src: url("https://idcdn.de/static-files/common/fonts/Poppins/Poppins600normal.woff2?20240408") format("woff2"), /* Super Modern Browsers */
+    url("https://idcdn.de/static-files/common/fonts/Poppins/Poppins600normal.woff?20240408") format("woff"); /* Modern Browsers */
+}
+
+/* poppins-bold */
+@font-face {
+    font-display: fallback;
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://idcdn.de/static-files/common/fonts/Poppins/Poppins700normal.woff2?20240408") format("woff2"), /* Super Modern Browsers */
+    url("https://idcdn.de/static-files/common/fonts/Poppins/Poppins700normal.woff?20240408") format("woff"); /* Modern Browsers */
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+/** grid **/
+.uid-sso-grid-row {
+    display: grid;
+    grid-auto-flow: row;
+}
+
+/** flex **/
+.uid-sso-flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/** title medium **/
+.uid-sso-title-md {
+    color: var(--uid-sso-color-on-surface);
+    font: var(--uid-sso-title-medium-weight-prominent) var(--uid-sso-title-medium-size) / var(--uid-sso-title-medium-line-height) var(--uid-sso-title-medium-font);
+    letter-spacing: var(--uid-sso-title-medium-letter-spacing);
+    word-break: break-word;
+    /* don't rely on host page css-resets... */
+    margin: 0;
+    padding: 0;
+}
+
+/** body large **/
+.uid-sso-text-lg {
+    color: var(--uid-sso-color-on-surface);
+    font: var(--uid-sso-body-large-weight) var(--uid-sso-body-large-size) / var(--uid-sso-body-large-line-height) var(--uid-sso-body-large-font);
+    letter-spacing: var(--uid-sso-body-large-letter-spacing);
+    word-break: break-word;
+    /* don't rely on host page css-resets... */
+    margin: 0;
+    padding: 0;
+}
+
+.uid-sso-text-lg.uid-sso-variant {
+    font: var(--uid-sso-body-large-weight-prominent) var(--uid-sso-body-large-size) / var(--uid-sso-body-large-line-height) var(--uid-sso-body-large-font);
+}
+
+/** body medium **/
+.uid-sso-text-md {
+    color: var(--uid-sso-color-on-surface);
+    font: var(--uid-sso-body-medium-weight) var(--uid-sso-body-medium-size) / var(--uid-sso-body-medium-line-height) var(--uid-sso-body-medium-font);
+    letter-spacing: var(--uid-sso-body-medium-letter-spacing);
+    /* don't rely on host page css-resets... */
+    margin: 0;
+    padding: 0;
+}
+
+.uid-sso-text-md.uid-sso-variant {
+    color: var(--uid-sso-color-on-tooltip-container);
+}
+
+/** body small **/
+.uid-sso-text-sm {
+    color: var(--uid-sso-color-on-surface);
+    font: var(--uid-sso-body-small-weight) var(--uid-sso-body-small-size) / var(--uid-sso-body-small-line-height) var(--uid-sso-body-small-font);
+    letter-spacing: var(--uid-sso-body-small-letter-spacing);
+    /* don't rely on host page css-resets... */
+    margin: 0;
+    padding: 0;
+}
+
+.uid-sso-text-with-marginTop {
+    margin-top: calc(var(--uid-sso-space-sm) * -1);
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+/** body link **/
+.uid-sso-link {
+    color: var(--uid-sso-color-on-surface);
+    font: var(--uid-sso-body-small-weight) var(--uid-sso-body-small-size) / var(--uid-sso-body-small-line-height) var(--uid-sso-body-small-font);
+    letter-spacing: var(--uid-sso-body-small-letter-spacing);
+    text-decoration: var(--uid-sso-text-decoration-underline);
+}
+
+.uid-sso-link:active,
+.uid-sso-link:focus,
+.uid-sso-link:visited {
+    color: var(--uid-sso-color-on-surface);
+}
+
+.uid-sso-link:hover {
+    color: var(--uid-sso-color-on-surface);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20), 0 1px 3px rgba(0, 0, 0, 0.10);
+}
+
+.uid-sso-text-link {
+    color: var(--uid-sso-color-primary);
+    text-decoration: var(--uid-sso-text-decoration-underline);
+}
+
+.uid-sso-text-link:hover,
+.uid-sso-text-link:active,
+.uid-sso-text-link:focus,
+.uid-sso-text-link:visited {
+    color: var(--uid-sso-color-primary);
+}
+
+.uid-sso-cta-container {
+    gap: var(--uid-sso-space-xs);
+    grid-template-columns: 1fr;
+}
+
+/** cta **/
+.uid-sso-cta {
+    align-items: center;
+    border: none;
+    border-radius: var(--uid-sso-size-2xs);
+    cursor: pointer;
+    font: var(--uid-sso-lable-large-weight-prominent) var(--uid-sso-lable-large-size) / var(--uid-sso-lable-large-line-height) var(--uid-sso-lable-large-font);
+    height: 48px;
+    justify-content: center;
+    letter-spacing: var(--uid-sso-lable-large-letter-spacing);
+    text-decoration: var(--uid-sso-text-decoration-none);
+}
+
+/** cta primary **/
+.uid-sso-cta-prim {
+    background-color: var(--uid-sso-color-primary);
+    border: 1px solid var(--uid-sso-color-primary);
+    color: var(--uid-sso-color-white);
+}
+
+.uid-sso-cta-prim:active,
+.uid-sso-cta-prim:focus,
+.uid-sso-cta-prim:visited {
+    color: var(--uid-sso-color-white);
+    background-color: var(--uid-sso-color-primary);
+}
+
+.uid-sso-cta-prim:hover {
+    color: var(--uid-sso-color-white);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.20), 0 1px 3px 1px rgba(0, 0, 0, 0.10);
+}
+
+
+/** cta secondary **/
+.uid-sso-cta-sec {
+    background-color: var(--uid-sso-color-white);
+    border: 1px solid var(--uid-sso-color-primary);
+    color: var(--uid-sso-color-primary);
+}
+
+.uid-sso-cta-sec:active,
+.uid-sso-cta-sec:focus,
+.uid-sso-cta-sec:visited {
+     border: 1px solid var(--uid-sso-color-primary);
+     color: var(--uid-sso-color-primary);
+ }
+
+.uid-sso-cta-sec:hover {
+    color: var(--uid-sso-color-primary);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.20), 0 1px 3px 1px rgba(0, 0, 0, 0.10);
+}
+
+/** cta tertiary **/
+.uid-sso-cta-ter {
+    background-color: var(--uid-sso-color-white);
+    color: var(--uid-sso-color-primary);
+}
+
+.uid-sso-cta-ter:active,
+.uid-sso-cta-ter:focus,
+.uid-sso-cta-ter:visited {
+    color: var(--uid-sso-color-primary);
+}
+
+.uid-sso-cta-ter:hover {
+    color: var(--uid-sso-color-primary);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.20), 0 1px 3px rgba(0, 0, 0, 0.10);
+}
+
+/* ==========================================================================
+   Dialog
+   ========================================================================== */
+.uid-sso-dialog {
+    animation: show 0.8s ease normal;
+    -webkit-animation: show 0.8s ease normal;
+    background-color: var(--uid-sso-color-surface);
+    border: none;
+    color: var(--uid-sso-color-on-surface);
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+    /* "global resets" like
+            * { margin:0 }
+        are possible on host-pages like west.
+        /*our css must be able to work correctly even with such styles in markup...*/
+    margin: auto auto 0 auto;
+}
+
+.uid-sso-dialog {
+    outline: none;
+}
+
+@-webkit-keyframes show {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.uid-sso-dialog::backdrop {
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.uid-sso-dialog-close {
+    cursor: pointer;
+    height: 16px;
+    justify-self: end;
+    width: 16px;
+    z-index: 1;
+}
+
+.uid-sso-dialog-container {
+    font-family: var(--uid-sso-font-family-brand);
+    font-size: 100%;
+    padding: var(--uid-sso-space-md) var(--uid-sso-space-xl);
+}
+
+.uid-sso-dialog-container-block {
+    gap: var(--uid-sso-space-md);
+    text-align: center;
+}
+
+.uid-sso-dialog-container-block-innen {
+    grid-template-columns: 1fr;
+    gap: var(--uid-sso-space-md);
+    justify-content: center;
+}
+
+/* ==========================================================================
+   Logos, Icons & Client Info
+   ========================================================================== */
+.uid-sso-logo {
+    width: 64px;
+    height: 24px;
+    margin: 0 auto;
+}
+
+.uid-sso-client-logo {
+    height: 30px;
+    margin: 0 auto var(--uid-sso-space-md) auto;
+}
+
+.uid-sso-clientname:before {
+    content: "Diese Seite nutzt"
+}
+
+.uid-sso-icon-feedback {
+    width: 41px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   login icon tooltip
+   ========================================================================== */
+.uid-sso-tooltip-text {
+    background-color: var(--uid-sso-color-tooltip-container);
+    border-radius: var(--uid-sso-size-2xs);
+    color: var(--uid-sso-color-on-tooltip-container);
+    padding: var(--uid-sso-space-3xs) var(--uid-sso-space-2xs);
+    position: absolute;
+    width: max-content;
+    max-width: 95vw;
+    margin-left: var(--uid-sso-unit-10px);
+    box-shadow: 0 var(--uid-sso-space-2xs) var(--uid-sso-space-2xs) 0 #00000033;
+    visibility: hidden;
+    text-align: center;
+    z-index: 2147483647; /* 1 more than the value of z-index for WEST header to make the tooltip visible */
+}
+
+.uid-sso-tooltip-story-page {
+    & > .uid-sso-tooltip-text {
+        padding: calc(var(--uid-sso-space-2xs) / 2) var(--uid-sso-space-2xs) calc(var(--uid-sso-space-2xs) / 2) var(--uid-sso-space-2xs);
+        z-index: 2147483647; /* 1 more than the value of z-index for WEST header to make the tooltip visible */
+    }
+}
+
+.uid-sso-tooltip-homepage {
+    & > .uid-sso-tooltip-text {
+        z-index: 99999; /* z-index should be higher than YARP header to make the tooltip visible */
+    }
+}
+
+.uid-sso-tooltip-arrow {
+    width: 0;
+    height: 0;
+    border-left: var(--uid-sso-unit-10px) solid transparent;
+    border-right: var(--uid-sso-unit-10px) solid transparent;
+    border-bottom: var(--uid-sso-unit-10px) solid var(--uid-sso-color-gray-600);
+    z-index: 2147483647;
+    position: absolute;
+    visibility: hidden;
+}
+
+.uid-sso-tooltip-content {
+    position: relative;
+}
+
+/** View for screens larger than 24.375em (= 390px) **/
+@media screen and (min-width: 24.375em) {
+    .uid-sso-dialog-container-block-innen {
+        grid-template-columns: 342px;
+    }
+}
+
+/** View for screens larger than 48em (= 768px) **/
+@media screen and (min-width: 48.063em) {
+    .uid-sso-dialog {
+        margin-bottom: auto;
+        width: 390px;
+    }
+}
+
+a:focus-visible {
+    outline: 2px solid #212121;
+    outline-offset: 2px
+}

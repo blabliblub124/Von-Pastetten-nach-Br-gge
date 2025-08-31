@@ -1,0 +1,17 @@
+/*
+ * This document contains trade secret data which is the property of
+ * Ippen Digital GmbH & Co. KG. Information contained herein may not be
+ * used, copied or disclosed in whole or part except as permitted by
+ * written agreement from Ippen Digital GmbH & Co. KG.
+ *
+ * Copyright (C) 2007- "2022" Ippen Digital GmbH & Co. KG / Munich / Germany
+ */
+
+:root {
+    --ecr-client-font-family: Merriweather, Georgia, 'Times New Roman', Times, serif;
+    --ecr-client-primary-color: #168acc;
+    --ecr-client-title-font-family: Arial;
+    --ecr-ticker-text-font-size-lg: 18px;
+    --ecr-ticker-text-font-size-md: 16px;
+    --ecr-ticker-text-font-size-sm: 15px;
+}
